@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import HeroImage from '../assets/image/background 1.svg';
 import IntegrationDisplay from '../assets/image/Hero-Image.svg';
-import Cardicon1 from '../assets/image/Card-icon-1.svg';
-import Cardicon2 from '../assets/image/Card-icon-2.svg';
+import Cardicon1 from '../assets/image/card-icon-1.svg';
+import Cardicon2 from '../assets/image/card-icon-2.svg';
 
 const HeroSection = () => {
     const heroRef = useRef(null);
