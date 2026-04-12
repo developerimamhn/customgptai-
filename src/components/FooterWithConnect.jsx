@@ -162,9 +162,9 @@ const FooterWithConnect = () => {
                                     Drive revenue, save time, delight customers.
                                 </p>
 
-                                <div className="connect-buttons">
-                                    <button className="btn btn--primary">Try free for 7 days</button>
-                                    <button className="btn btn--secondary">Talk to sales</button>
+                                <div className="btn-container">
+                                    <button className=" btn primary-btn">Try free for 7 days</button>
+                                    <button className="btn secondary-btn">Talk to sales</button>
                                 </div>
                             </div>
                             <div className="connect-image-wrap relative">

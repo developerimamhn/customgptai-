@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import BgImage2 from '../assets/image/Frame 2085662539.png'; 
-import BgImage1 from '../assets/image/Frame 208566253s9.png';
+import BgImage2 from '../assets/image/bg-new.svg'; 
+import BgImage1 from '../assets/image/bg-new2.svg';
 import '../assets/style/ResultsSection.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -58,7 +58,7 @@ const StatCard = ({ number, unit, label, title, titleGray, description, directio
   return (
     <div className="stat-card-wrapper" ref={cardRef} style={{ opacity: 0 }}>
       <div className="stat-card-border">
-        <img src={bgImage} alt="background" className="stat-card-border-img" />
+        <img src={bgImage} alt="background" className="stat-card-border-img scale-y-[-1]" />
         <div className="stat-card-border-gradient" />
       </div>
       <div className="stat-card">

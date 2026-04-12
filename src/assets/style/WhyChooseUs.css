@@ -389,15 +389,6 @@
     }
 }
 
-.header-description {
-    color: #8B929E;
-    font-family: 'Geist';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-    @apply text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px];
-}
-
 
 
 .cards-grid {
@@ -655,7 +646,7 @@
 
 @media (max-width: 1023px) {
     .header-left, .header-description {
-        text-align: left;
+        text-align: center;
         max-width: 100%;
     }
 }

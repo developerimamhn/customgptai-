@@ -240,7 +240,7 @@ const LaunchSteps = () => {
             ref={sectionRef}
             style={{ overflowX: 'hidden' }}
         >
-            <div className="container mx-auto px-[36px] sm:px-[40px] md:px-[48px] lg:px-[64px] xl:px-[96px] 2xl:px-[127px]">
+            <div className="container mx-auto px-[16px] sm:px-[40px] md:px-[48px] lg:px-[64px] xl:px-[96px] 2xl:px-[127px]">
                 <div className="launch-header">
                     <h2 className="launch-title">
                         Launch in <span className="launch-title-muted">3 streamlined steps</span>

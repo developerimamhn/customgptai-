@@ -170,7 +170,7 @@ const WhyChooseUs = () => {
                             <img
                                 src={TrustImg}
                                 alt="Trust Mobile Graphic"
-                                className="absolute w-3/5 h-full bottom-[-10%] right-0"
+                                className="absolute w-3/5 h-full bottom-[-20%] right-0"
                             />
                         </div>
                     </div>

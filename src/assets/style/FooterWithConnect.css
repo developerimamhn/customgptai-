@@ -2,6 +2,7 @@
     width: 100%;
     background-color: #FBFBFD;
 }
+
 .connect-section {
     position: relative;
     width: 100%;
@@ -45,6 +46,7 @@
     align-items: center;
     width: 100%;
 }
+
 .connect-text {
     z-index: 10;
     text-align: left;
@@ -90,7 +92,7 @@
     border: none;
 }
 
-.btn:active {
+/* .btn:active {
     transform: scale(0.95);
 }
 
@@ -104,9 +106,9 @@
         0 15px 20px -5px rgba(59, 130, 246, 0.3),
         inset 4px 4px 4px rgba(19, 26, 228, 0.4),
         inset -3px -3px 4px rgba(191, 229, 251, 0.5);
-}
+} */
 
-.btn--secondary {
+/* .btn--secondary {
     color: #4A4A59;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
     border: 1px solid rgba(203, 203, 203, 0.5);
@@ -115,7 +117,7 @@
 
 .btn--secondary:hover {
     background: rgba(255, 255, 255, 0.9);
-}
+} */
 
 /* Right Image */
 .connect-image-wrap {
@@ -208,7 +210,8 @@
     font-family: 'Geist';
     font-style: normal;
     font-weight: 400;
-    line-height: 150%; /* 24px */
+    line-height: 150%;
+    /* 24px */
     letter-spacing: -0.4px;
 }
 
@@ -216,8 +219,7 @@
     opacity: 1;
 }
 
-.footer-col {
-}
+.footer-col {}
 
 .footer-col__title {
     font-size: 16px;
@@ -310,6 +312,7 @@
     width: 100%;
     background-color: #FBFBFD;
 }
+
 .connect-section {
     position: relative;
     width: 100%;
@@ -352,6 +355,7 @@
     align-items: center;
     width: 100%;
 }
+
 .connect-text {
     z-index: 10;
     text-align: left;
@@ -401,7 +405,7 @@
     transform: scale(0.95);
 }
 
-.btn--primary {
+/* .btn--primary {
     color: #ffffff;
     background:
         radial-gradient(100% 100% at 50% 100%, #1E82E0 0%, #1C38EA 100%),
@@ -411,14 +415,14 @@
         0 15px 20px -5px rgba(59, 130, 246, 0.3),
         inset 4px 4px 4px rgba(19, 26, 228, 0.4),
         inset -3px -3px 4px rgba(191, 229, 251, 0.5);
-}
+} */
 
-.btn--secondary {
+/* .btn--secondary {
     color: #4A4A59;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
     border: 1px solid rgba(203, 203, 203, 0.5);
     backdrop-filter: blur(12px);
-}
+} */
 
 .btn--secondary:hover {
     background: rgba(255, 255, 255, 0.9);
@@ -602,7 +606,8 @@
    Mobile Responsiveness 
    ============================================================ */
 
-   @media (max-width: 767px) {
+@media (max-width: 767px) {
+
     /* Main Content */
     .connect-content {
         padding: 40px 20px !important;
@@ -619,7 +624,7 @@
     }
 
     .connect-heading {
-        font-size: 28px !important; 
+        font-size: 28px !important;
         line-height: 1.2;
         margin-bottom: 16px;
     }
@@ -659,7 +664,7 @@
     }
 
     .footer-grid {
-        grid-template-columns: 1fr 1fr !important; 
+        grid-template-columns: 1fr 1fr !important;
         gap: 24px;
         margin-bottom: 40px;
     }
@@ -691,12 +696,58 @@
         margin-top: 24px;
     }
 }
+
 @media (max-width: 480px) {
     .footer-grid {
-        grid-template-columns: 1fr !important; 
+        grid-template-columns: 1fr !important;
     }
-    
+
     .footer-brand {
         grid-column: span 1 !important;
     }
+}
+
+/* btn */
+
+
+.btn-container {
+    display: flex;
+    gap: 12px;
+    width: 100%;
+    padding: 0 20px;
+    justify-content: center;
+}
+
+.primary-btn,
+.secondary-btn {
+    flex: 1;
+    padding: 18px 0;
+    border-radius: 12px;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: center;
+}
+
+.primary-btn {
+
+    color: #ffffff;
+    background:
+        radial-gradient(100% 100% at 50% 100%, #1E82E0 0%, #1C38EA 100%),
+        linear-gradient(180deg, #398FF3 0%, #FFFFFF 100%);
+    background-blend-mode: normal, overlay;
+    box-shadow:
+        0 15px 20px -5px rgba(59, 130, 246, 0.3),
+        inset 4px 4px 4px rgba(19, 26, 228, 0.4),
+        inset -3px -3px 4px rgba(191, 229, 251, 0.5);
+}
+
+.secondary-btn {
+    background: white;
+    color: #333;
+    border: 1px solid #E0E0E0;
+    padding: 8px 0;
+    color: #4A4A59;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
+    border: 1px solid rgba(203, 203, 203, 0.5);
+    backdrop-filter: blur(12px);
 }
