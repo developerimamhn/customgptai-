@@ -11,6 +11,7 @@ import Xicon from '../assets/image/x-icon.svg';
 import InstaGram from '../assets/image/insta-icon.svg';
 import DisCord from '../assets/image/discord-icon.svg';
 import GitHub from '../assets/image/github-icon.svg';
+import LeftImage1 from '../assets/image/Group 383sd49.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,7 +67,7 @@ const FooterWithConnect = () => {
                 },
             });
             gsap.from('.connect-buttons .btn', {
-                opacity: 0,
+                opacity: 1,
                 y: 20,
                 duration: 0.5,
                 stagger: 0.1,
@@ -144,7 +145,7 @@ const FooterWithConnect = () => {
     }, []);
 
     return (
-        <div className="footer-wrapper" ref={wrapperRef}>
+        <div className="footer-wrapper bg-[#F2F3FA]" ref={wrapperRef}>
             <section className="connect-section" ref={connectRef}>
                 <div className="connect-inner container mx-auto">
                     <div className="connect-top-line" />
@@ -166,11 +167,16 @@ const FooterWithConnect = () => {
                                     <button className="btn btn--secondary">Talk to sales</button>
                                 </div>
                             </div>
-                            <div className="connect-image-wrap">
+                            <div className="connect-image-wrap relative">
+                                <img
+                                    src={LeftImage1}
+                                    alt="Central Business Knowledge "
+                                    className="connect-image absolute top-0"
+                                />
                                 <img
                                     src={LeftImage}
                                     alt="Central Business Knowledge"
-                                    className="connect-image"
+                                    className="connect-image opacity-0 outline-none select-none"
                                 />
                             </div>
                         </div>
@@ -182,24 +188,26 @@ const FooterWithConnect = () => {
                     <div className="footer-top-line" />
 
                     <div className="footer-content">
-                        <div className="footer-grid  flex items-start justify-between gap-[24px] sm:gap-[32px] md:gap-[36px] lg:gap-[40px] xl:gap-[48px] 2xl:gap-[66px]">
-                            <div className="footer-brand">
-                                <img src={FooterImage} alt="Footer Logo" className="footer-logo" />
-                                <div className="footer-badges">
-                                    <img src={FooterIcon1} alt="" />
-                                    <img src={FooterIcon2} alt="" />
-                                    <img src={FooterIcon3} alt="" />
-                                    <img src={FooterIcon4} alt="" />
-                                </div>
-                                <p className="footer-compliance">
-                                    <span className="footer-compliance--highlight">GDPR & SOC2</span>
-                                    {' '}<span className="footer-compliance--label">Compliant</span>
-                                </p>
-                                <div className="footer-socials">
-                                    <span className="footer-social-icon"><img src={Xicon} alt="X" /></span>
-                                    <span className="footer-social-icon"><img src={InstaGram} alt="Instagram" /></span>
-                                    <span className="footer-social-icon"><img src={DisCord} alt="Discord" /></span>
-                                    <span className="footer-social-icon"><img src={GitHub} alt="GitHub" /></span>
+                        <div className="footer-grid h-full md:flex-row flex-col flex items-start justify-between gap-[24px] sm:gap-[32px] md:gap-[36px] lg:gap-[40px] xl:gap-[48px] 2xl:gap-[66px]">
+                            <div className="">
+                                <img src={FooterImage} alt="Footer Logo" className="footer-logo mb-[16px] sm:mb-[20px] md:mb-[24px] lg:mb-[32px] xl:mb-[36px] 2xl:mb-[40px]" />
+                                <div className=''>
+                                    <div className="footer-badges">
+                                        <img src={FooterIcon1} alt="" />
+                                        <img src={FooterIcon2} alt="" />
+                                        <img src={FooterIcon3} alt="" />
+                                        <img src={FooterIcon4} alt="" />
+                                    </div>
+                                    <p className="footer-compliance">
+                                        <span className="footer-compliance--highlight">GDPR & SOC2</span>
+                                        {' '}<span className="footer-compliance--label">Compliant</span>
+                                    </p>
+                                    <div className="footer-socials">
+                                        <span className="footer-social-icon"><img src={Xicon} alt="X" /></span>
+                                        <span className="footer-social-icon"><img src={InstaGram} alt="Instagram" /></span>
+                                        <span className="footer-social-icon"><img src={DisCord} alt="Discord" /></span>
+                                        <span className="footer-social-icon"><img src={GitHub} alt="GitHub" /></span>
+                                    </div>
                                 </div>
                             </div>
                             {footerColumns.map((col) => (

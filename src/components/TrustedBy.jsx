@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Clints1 from '../assets/image/clints-1.svg';
-import Clints2 from '../assets/image/clints-2.svg';
-import Clints3 from '../assets/image/clints-3.svg';
-import Clints4 from '../assets/image/clints-4.svg';
-import Clints5 from '../assets/image/clints-5.svg';
-import Clints6 from '../assets/image/clints-6.svg';
+import Clints1 from '../assets/image/Clints-1.svg';
+import Clints2 from '../assets/image/Clints-2.svg';
+import Clints3 from '../assets/image/Clints-3.svg';
+import Clints4 from '../assets/image/Clints-4.svg';
+import Clints5 from '../assets/image/Clints-5.svg';
+import Clints6 from '../assets/image/Clints-6.svg';
 import '../assets/style/TrustedBy.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -54,7 +54,7 @@ const TrustedBy = () => {
                 });
             }
 
-            // Smooth scroll animation for slider entrance
+            // Slider Entrance
             gsap.from(sliderRef.current, {
                 opacity: 0,
                 y: 40,
@@ -65,12 +65,10 @@ const TrustedBy = () => {
                     start: 'top 75%',
                     end: 'top 25%',
                     scrub: false,
-                    markers: false
                 },
                 delay: 0.3
             });
 
-            // Scroll-triggered animation for logo slider moving left
             const slider = sliderContentRef.current;
             if (slider) {
                 gsap.to(slider, {
@@ -80,11 +78,9 @@ const TrustedBy = () => {
                         start: 'top center',
                         end: 'bottom center',
                         scrub: 3,
-                        markers: false
                     }
                 });
 
-                // Zoom effect on scroll
                 ScrollTrigger.create({
                     trigger: sectionRef.current,
                     onUpdate: (self) => {
@@ -98,14 +94,17 @@ const TrustedBy = () => {
                 });
             }
 
-            // Awwwards-style hover effects on logo items
+            // Logo Hover Effects
             gsap.utils.toArray('.logo-item').forEach((item) => {
                 const img = item.querySelector('.logo-image');
+                gsap.set(img, {
+                    filter: "grayscale(0%)",
+                    opacity: 1
+                });
 
                 item.addEventListener('mouseenter', () => {
                     gsap.to(img, {
                         scale: 1.2,
-                        filter: 'brightness(1.1)',
                         duration: 0.3,
                         ease: 'elastic.out(1, 0.5)'
                     });
@@ -114,14 +113,13 @@ const TrustedBy = () => {
                 item.addEventListener('mouseleave', () => {
                     gsap.to(img, {
                         scale: 1,
-                        filter: 'brightness(1)',
                         duration: 0.3,
                         ease: 'power2.out'
                     });
                 });
             });
 
-            // Morphing divider animation on logo items
+            // Morphing divider
             gsap.utils.toArray('.logo-divider').forEach((divider) => {
                 gsap.from(divider, {
                     scaleX: 0,
@@ -134,12 +132,11 @@ const TrustedBy = () => {
                         start: 'top 75%',
                         end: 'top 25%',
                         scrub: false,
-                        markers: false
                     }
                 });
             });
 
-            // Add gradient background animation
+            // Background Gradient Animation
             gsap.to(sectionRef.current, {
                 backgroundPosition: '200% center',
                 duration: 8,
@@ -149,16 +146,12 @@ const TrustedBy = () => {
             });
         }, sectionRef);
 
-        return () => {
-            context.revert();
-            ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-        };
+        return () => context.revert(); 
     }, []);
-
     return (
         <section className="trusted-by-section" ref={sectionRef}>
             <div className="trusted-by-container container mx-auto overflow-hidden">
-                <p 
+                <p
                     className="trusted-by-title pb-[16px] sm:pb-[20px] md:pb-[24px] lg:pb-[32px] xl:pb-[36px] 2xl:pb-[40px]"
                     ref={titleRef}
                 >
@@ -185,7 +178,7 @@ const TrustedBy = () => {
                                 ) : (
                                     <span className="logo-fallback">{logo.name}</span>
                                 )}
-                                
+
                                 <div className="logo-divider" />
                             </div>
                         ))}

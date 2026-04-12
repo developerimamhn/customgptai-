@@ -5,10 +5,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import ShortImage from '../assets/image/avater.svg';
-import CardPhoto1 from '../assets/image/84036803_0310_80 1.png';
-import CardPhoto2 from '../assets/image/84036803_0310_80 2.png';
-import CardPhoto3 from '../assets/image/chooseus-1.svg';
+import ShortImage from '../assets/image/Group 38349.png';
+import CardPhoto1 from '../assets/image/Group 38350.png';
+import CardPhoto2 from '../assets/image/Group 38351.png';
+import CardPhoto3 from '../assets/image/Group 38349.png';
 import '../assets/style/TestimonialSection.css';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -282,14 +282,13 @@ const TestimonialSection = () => {
                         return (
                         <SwiperSlide key={index} className={`testimonial-card ${isActive ? 'testimonial-card--active' : 'testimonial-card--inactive'}`}>
                             {isActive ? (
-
                                 <div className="testimonial-highlight w-full" style={{ background: "linear-gradient(135deg, rgba(50,109,228,1) 0%, rgba(74,126,240,1) 50%, rgba(98,143,253,1) 100%)" }}>
                                     <div>
                                         <span className="testimonial-quote-mark">"</span>
                                         <p className="testimonial-highlight-text">{item.quote}</p>
                                     </div>
                                     <div className="testimonial-author">
-                                        <img src={item.avatar} alt={item.name} className="testimonial-avatar testimonial-avatar--white" />
+                                        <img src={item.avatar} alt={item.name} className="testimonial-avatar testimonial-avatar--white object-cover object-top" />
                                         <div>
                                             <h5 className="testimonial-name">{item.name}</h5>
                                             <p className="testimonial-role testimonial-role--light">{item.role}</p>
@@ -297,12 +296,10 @@ const TestimonialSection = () => {
                                     </div>
                                 </div>
                             ) : (
-
-                                <div className="testimonial-back" style={{ backgroundImage: `url(${item.image || CardPhoto1})` }}>
+                                <div className="testimonial-back" style={{ backgroundImage: `url(${item.image || CardPhoto1})`, backgroundSize: 'cover', backgroundPosition: 'top', backgroundRepeat: 'no-repeat' , width: '100%',}}>
                                     <div className="testimonial-back-overlay" />
                                     <div className="testimonial-back-content">
                                         <div className="testimonial-author testimonial-author--image-card">
-                                            <img src={item.avatar} alt={item.name} className="testimonial-avatar testimonial-avatar--small" />
                                             <div>
                                                 <h5 className="testimonial-name testimonial-name--light">{item.name}</h5>
                                                 <p className="testimonial-role testimonial-role--image-card">{item.role}</p>

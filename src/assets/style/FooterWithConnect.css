@@ -174,14 +174,9 @@
     flex-direction: column;
 }
 
-.footer-logo {
-    margin-bottom: 24px;
-}
-
 .footer-badges {
     display: flex;
     gap: 8px;
-    margin-top: 160px;
 }
 
 .footer-compliance {
@@ -309,10 +304,6 @@
     .footer-content {
         padding: 48px 24px 32px;
     }
-
-    .footer-badges {
-        margin-top: 40px;
-    }
 }
 
 .footer-wrapper {
@@ -351,6 +342,7 @@
     min-height: 600px;
     display: flex;
     align-items: center;
+    @apply py-[32px] sm:py-[36px] md:py-[40px] lg:py-[48px] xl:py-[64px] 2xl:py-[96px] px-[32px] sm:px-[36px] md:px-[40px] lg:px-[48px] xl:px-[64px] 2xl:px-[80px];
 }
 
 .connect-grid {
@@ -437,6 +429,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 160px;
 }
 
 .connect-image {
@@ -487,14 +480,9 @@
     flex-direction: column;
 }
 
-.footer-logo {
-    margin-bottom: 24px;
-}
-
 .footer-badges {
     display: flex;
     gap: 8px;
-    margin-top: 160px;
 }
 
 .footer-compliance {
@@ -610,24 +598,6 @@
 }
 
 
-@media (max-width: 767px) {
-    .connect-content {
-        padding: 60px 24px;
-    }
-
-    .connect-heading {
-        font-size: 32px;
-    }
-
-    .footer-content {
-        padding: 48px 24px 32px;
-    }
-
-    .footer-badges {
-        margin-top: 40px;
-    }
-}
-
 /* ============================================================
    Mobile Responsiveness 
    ============================================================ */
@@ -702,7 +672,6 @@
     }
 
     .footer-badges {
-        margin-top: 32px !important;
         justify-content: center;
         flex-wrap: wrap;
     }
