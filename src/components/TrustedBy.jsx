@@ -1,12 +1,12 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Clints1 from '../assets/image/Clints-1.svg';
-import Clints2 from '../assets/image/Clints-2.svg';
-import Clints3 from '../assets/image/Clints-3.svg';
-import Clints4 from '../assets/image/Clints-4.svg';
-import Clints5 from '../assets/image/Clints-5.svg';
-import Clints6 from '../assets/image/Clints-6.svg';
+import Clints1 from '../assets/image/clints-1.svg';
+import Clints2 from '../assets/image/clints-2.svg';
+import Clints3 from '../assets/image/clints-3.svg';
+import Clints4 from '../assets/image/clints-4.svg';
+import Clints5 from '../assets/image/clints-5.svg';
+import Clints6 from '../assets/image/clints-6.svg';
 import '../assets/style/TrustedBy.css';
 
 gsap.registerPlugin(ScrollTrigger);
