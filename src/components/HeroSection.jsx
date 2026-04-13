@@ -96,7 +96,7 @@ const HeroSection = () => {
                         Zero data sharing & training
                     </div>
                 </div>
-                <div className="hero__buttons" ref={buttonsRef}>
+                <div className="hero__buttons flex-row" ref={buttonsRef}>
                     <button className="btnprimary">Sign up free</button>
                     <button className="btnglass">Chat with the AI</button>
                 </div>

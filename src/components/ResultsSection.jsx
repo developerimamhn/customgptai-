@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import BgImage2 from '../assets/image/bg-new.svg'; 
-import BgImage1 from '../assets/image/bg-new2.svg';
+import BgImage1 from '../assets/image/Frame 2sss085662539.png'; 
+import BgImage2 from '../assets/image/Frame 2085662539.png';
 import '../assets/style/ResultsSection.css';
 
 gsap.registerPlugin(ScrollTrigger);

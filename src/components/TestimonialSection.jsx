@@ -217,7 +217,6 @@ const TestimonialSection = () => {
                 btn.addEventListener('mouseenter', () => {
                     gsap.to(btn, {
                         scale: 1.1,
-                        backgroundColor: 'rgba(0, 0, 0, 0.1)',
                         duration: 0.3,
                         ease: 'power2.out'
                     });
@@ -226,7 +225,6 @@ const TestimonialSection = () => {
                 btn.addEventListener('mouseleave', () => {
                     gsap.to(btn, {
                         scale: 1,
-                        backgroundColor: 'transparent',
                         duration: 0.3,
                         ease: 'power2.out'
                     });
@@ -318,9 +316,18 @@ const TestimonialSection = () => {
                         <div className="testimonial-progress-fill" style={{ width: `${progressFill}%` }} />
                     </div>
                     <div className="testimonial-nav">
-                        <button className="testimonial-nav-btn left">←</button>
-                        <span className="testimonial-nav-count">{currentIndex} / {baseTestimonials.length}</span>
-                        <button className="testimonial-nav-btn right">→</button>
+                        <button className="testimonial-nav-btn left"><svg xmlns="http://www.w3.org/2000/svg" className='w-[20px] h-[20px]' viewBox="0 0 20 20" fill="none">
+                            <path d="M4.58335 10L15.8334 10" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.16663 5C9.16663 5 4.16663 8.68242 4.16663 10C4.16663 11.3177 9.16663 15 9.16663 15" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <span className="testimonial-nav-count"><span className='text-[#1C38EA]'>{currentIndex}</span> / {baseTestimonials.length}</span>
+                        <button className="testimonial-nav-btn right">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M15.4167 10H4.16663" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8334 15C10.8334 15 15.8334 11.3176 15.8334 10C15.8334 8.68233 10.8334 5 10.8334 5" stroke="#141B34" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
                 </div>
 
