@@ -30,13 +30,13 @@
 }
 
 .navbar__link {
-    color: #FFF;
-    text-align: center;
-    font-family: "Geist";
-    font-style: normal;
-    font-weight: 500;
-    line-height: 140%;
-    @apply text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px];
+  color: #FFF;
+  text-align: center;
+  font-family: "Geist";
+  font-style: normal;
+  font-weight: 500;
+  line-height: 140%;
+  @apply text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px];
 }
 
 .navbar__link:hover {
@@ -90,7 +90,7 @@
   top: 100%;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.385);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -141,8 +141,90 @@
     opacity: 0;
     transform: translateY(-8px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+
+/* Full Screen Overlay Setup */
+.navbar__mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(149, 148, 148, 0.571);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  transform: translateX(-100%);
+}
+
+
+.mobile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.mobile-logo-center {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.mobile-logo-center img {
+  height: 32px;
+}
+
+.mobile-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+/* Links & Buttons Container */
+.mobile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center; 
+}
+
+.navbar__mobile-link {
+  color: #4A4A59;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  font-family: "Geist";
+}
+
+.navbar__mobile-cta {
+  background-color: #ffffff;
+  color: #4A4A59;
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #E0E0E0;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin-top: 20px;
+}
+
+/* Responsive Hidden Toggle */
+@media (min-width: 768px) {
+  .navbar__mobile-overlay {
+    display: none;
   }
 }
