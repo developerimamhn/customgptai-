@@ -156,10 +156,10 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(149, 148, 148, 0.571);
+  background: rgba(138, 202, 255, 0.571);
 
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(10px);
+  /* -webkit-backdrop-filter: blur(20px); */
   z-index: 100;
   display: flex;
   flex-direction: column;
@@ -173,12 +173,12 @@
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 
 .mobile-logo-center {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-grow: 1;
 }
 
@@ -202,7 +202,7 @@
 }
 
 .navbar__mobile-link {
-  color: #4A4A59;
+  color: #ffffff;
   font-size: 18px;
   font-weight: 500;
   text-decoration: none;

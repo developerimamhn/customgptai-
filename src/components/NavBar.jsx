@@ -59,7 +59,11 @@ const Navbar = () => {
       {/* Full Screen Overlay Menu */}
       <div className={`navbar__mobile-overlay ${isOpen ? 'is-open' : ''}`} ref={mobileMenuRef}>
         
-        <div className="mobile-header">
+        <div className="mobile-header relative">
+          
+          <div className="mobile-logo-center">
+            <img src={Navlogo} alt="Logo" />
+          </div>
           {/* Top Left Close Button */}
           <button className="mobile-close" onClick={toggleMenu}>
              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
@@ -67,12 +71,6 @@ const Navbar = () => {
              </svg>
           </button>
           
-          {/* Center Logo */}
-          <div className="mobile-logo-center">
-            <img src={Navlogo} alt="Logo" />
-          </div>
-          
-          <div style={{ width: '24px' }}></div>
         </div>
 
         <div className="mobile-content">
